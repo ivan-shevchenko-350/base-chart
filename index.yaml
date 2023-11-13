@@ -9,6 +9,6 @@ entries:
     name: base-chart
     type: application
     urls:
-    - https://raw.githubusercontent.com/endyroot/base-chart/main/
+    - https://raw.githubusercontent.com/endyroot/base-chart/main/base-chart-0.1.0.tgz
     version: 0.1.0
 generated: "2023-11-13T21:56:41.068196584+02:00"
