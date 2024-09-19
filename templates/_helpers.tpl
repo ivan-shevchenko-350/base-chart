@@ -61,3 +61,13 @@ Create the name of the service account to use
 {{- end }}
 {{- end }}
 
+{{/*
+Create the name of the servicemonitor with prefix
+*/}}
+{{- define "base-chart.serviceMonitorName" -}}
+{{- if .Values.servicemonitor.prefix }}
+{{- .Values.servicemonitor.prefix }}
+{{- end }}{{ include "base-chart.fullname" . }}
+{{- end }}
+
+

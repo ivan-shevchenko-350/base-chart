@@ -216,6 +216,7 @@ fileLoad:
 
 servicemonitor:
   enabled: false
+#  prefix: ""
 #  prometheus:
 #    namespace: monitoring
 #    labels:
