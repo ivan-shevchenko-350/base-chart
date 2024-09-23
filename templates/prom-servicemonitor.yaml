@@ -2,7 +2,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ include "base-chart.fullname" . }}
+  name: {{ include "base-chart.serviceMonitorName" . }}
   labels:
     {{- toYaml .Values.servicemonitor.prometheus.labels | nindent 4 }}
   namespace: {{ .Values.servicemonitor.prometheus.namespace }}

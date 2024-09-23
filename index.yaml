@@ -3,7 +3,17 @@ entries:
   base-chart:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-11-13T21:56:41.069159507+02:00"
+    created: "2024-09-19T18:55:10.597117+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 386301c8dedd213970927e148e93d81e0fcece06d158bd83f3e4bf560d8d7836
+    name: base-chart
+    type: application
+    urls:
+      - https://raw.githubusercontent.com/endyroot/base-chart/main/base-chart-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-09-19T18:55:10.596318+03:00"
     description: A Helm chart for Kubernetes
     digest: 40dc637f9b8c00f68d5c1172ec11d1452264525afbdfe36a5515fbb499f26d79
     name: base-chart
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/endyroot/base-chart/main/base-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-13T21:56:41.068196584+02:00"
+generated: "2024-09-19T18:55:10.592723+03:00"
