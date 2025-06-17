@@ -1,0 +1,22 @@
+{{- if .Values.autoscaling.enabled }}
+{{- if and .Values.autoscaling.keda .Values.autoscaling.keda.enabled }}
+{{- if gt (len .Values.autoscaling.keda.triggers) 0 }}
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: {{ include "base-chart.fullname" . }}
+  labels:
+    {{- include "base-chart.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    name: {{ include "base-chart.fullname" . }}
+  minReplicaCount: {{ .Values.autoscaling.minReplicas }}
+  maxReplicaCount: {{ .Values.autoscaling.maxReplicas }}
+  {{- with .Values.autoscaling.keda.triggers }}
+  triggers:
+    {{- toYaml . | nindent 5 }}
+  {{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+

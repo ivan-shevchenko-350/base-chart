@@ -1,4 +1,5 @@
 {{- if .Values.autoscaling.enabled }}
+{{- if not (and .Values.autoscaling.keda .Values.autoscaling.keda.enabled) }}
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -34,3 +35,5 @@ spec:
           averageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
   {{- end }}
 {{- end }}
+{{- end }}
+
