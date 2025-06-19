@@ -213,11 +213,6 @@ tolerations: []
 
 affinity: {}
 
-volumeMounts: []
-#  - mountPath: /etc/timezone
-#    name: <volumeName>
-#    subPath: ..data/timezone
-
 fileLoad:
   enabled: false
   mountPath: /app/config
