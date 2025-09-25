@@ -172,6 +172,10 @@ spec:
       {{- if .Values.fileLoad.enabled }}
         - name: files-config
           configMap:
-            name: {{ include "base-chart.fullname" . }}-config      
+            name: {{ include "base-chart.fullname" . }}-config
+      {{- end }}
+      {{- if .Values.emptyDir.enable }}
+        - name: {{ .Values.emptyDir.name }}
+          emptyDir: {}
       {{- end }}
 {{- end }}

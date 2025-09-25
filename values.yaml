@@ -218,6 +218,9 @@ affinity: {}
 fileLoad:
   enabled: false
   mountPath: /app/config
+emptyDir:
+  enable: false
+  name: "emptyDir"
 
 servicemonitor:
   enabled: false
